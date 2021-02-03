@@ -1,12 +1,13 @@
 import { DropdownItems } from 'app/types';
 import { MAIN_MENU_ITEMS } from 'app/globals';
 import { dropdown } from 'ui/dropdown';
+import { sideNavOpen } from 'app/sideNavOpen';
 const iconImage = require('assets/icon.png');
 
 export const renderButton = (parent: HTMLAnchorElement, maxMenuItemsVisible: number) => {
     const button = document.createElement('button');
     button.id = 'button';
-    button.onclick = () => console.log('button clicked');
+    button.onclick = () => sideNavOpen();
 
     const img = document.createElement('img');
     img.src = iconImage.default;

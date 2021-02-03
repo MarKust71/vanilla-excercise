@@ -46,5 +46,8 @@
         "webpack-cli": "^4.5.0",
         "webpack-dev-server": "^3.11.2",
         "write-file-webpack-plugin": "^4.5.1"
+    },
+    "dependencies": {
+        "@fortawesome/fontawesome-svg-core": "^1.2.34"
     }
 }

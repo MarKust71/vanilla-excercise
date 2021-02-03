@@ -15,6 +15,7 @@ export const navbar = (): HTMLDivElement => {
 
     if (!maxMenuItemsVisible) {
         const menuitem = document.createElement('a');
+        menuitem.href = '#';
         renderButton(menuitem, 1);
         div.appendChild(menuitem);
         return div;
@@ -22,6 +23,7 @@ export const navbar = (): HTMLDivElement => {
 
     for (let i = 0; i <= maxMenuItemsVisible - 1; i++) {
         const menuitem = document.createElement('a');
+        menuitem.href = '#';
         if (i === maxMenuItemsVisible - 1) {
             if (maxMenuItemsVisible < MAIN_MENU_ITEMS.length) {
                 renderButton(menuitem, maxMenuItemsVisible);

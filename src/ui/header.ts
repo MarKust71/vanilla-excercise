@@ -2,6 +2,7 @@ import 'ui/header.css';
 import 'ui/title.css';
 import { navbar } from 'ui/navbar';
 import { TITLE } from 'app/globals';
+import { sidenav } from 'ui/sidenav';
 
 export const header = (): HTMLDivElement => {
     const div = document.createElement('div');
@@ -14,6 +15,8 @@ export const header = (): HTMLDivElement => {
 
     const menubar = navbar();
     div.appendChild(menubar);
+
+    div.appendChild(sidenav());
 
     return div;
 };
