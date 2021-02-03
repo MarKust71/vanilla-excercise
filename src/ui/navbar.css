@@ -1,0 +1,28 @@
+/*
+:root {
+    --MENU_ITEM_WIDTH: 175px;
+}
+*/
+
+.navbar {
+    overflow: hidden;
+}
+
+.navbar a {
+    float: left;
+    font-size: 16px;
+    color: gray;
+    background-color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    width: var(--MENU_ITEM_WIDTH);
+    border-right: 1px solid lightgray;
+    border-bottom: 1px solid lightgrey;
+}
+
+.navbar a:hover, .dropdown:hover .dropbtn {
+    font-weight: 700;
+    color: blue;
+    border-bottom: 3px solid blue;
+}
