@@ -1,6 +1,7 @@
 import 'ui/sidenav.css';
 import { sideNavClose } from 'app/sideNavClose';
 import { closeIcon } from 'ui/closeIcon';
+import { MAIN_MENU_ITEMS } from 'app/globals';
 
 export const sidenav = (): HTMLDivElement => {
     const div = document.createElement('div');
@@ -17,29 +18,13 @@ export const sidenav = (): HTMLDivElement => {
     a.appendChild(closeIcon());
     div.appendChild(a);
 
-    a = document.createElement('a');
-    a.href = '#';
-    text = document.createTextNode('About');
-    a.appendChild(text);
-    div.appendChild(a);
-
-    a = document.createElement('a');
-    a.href = '#';
-    text = document.createTextNode('Services');
-    a.appendChild(text);
-    div.appendChild(a);
-
-    a = document.createElement('a');
-    a.href = '#';
-    text = document.createTextNode('Clients');
-    a.appendChild(text);
-    div.appendChild(a);
-
-    a = document.createElement('a');
-    a.href = '#';
-    text = document.createTextNode('Contact');
-    a.appendChild(text);
-    div.appendChild(a);
+    MAIN_MENU_ITEMS.map((item) => {
+        a = document.createElement('a');
+        a.href = '#';
+        text = document.createTextNode(item);
+        a.appendChild(text);
+        div.appendChild(a);
+    });
 
     return div;
 };
