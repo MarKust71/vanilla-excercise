@@ -1,6 +1,6 @@
 import 'ui/navbar.css';
 import { MAIN_MENU_ITEMS, MENU_ITEM_PADDING_BORDER, MENU_ITEM_WIDTH, TITLE_WIDTH } from 'app/globals';
-import * as iconImage from 'assets/icon.png';
+import * as iconImage from '../assets/icon.png';
 import { dropdown } from 'ui/dropdown';
 
 export const navbar = (): HTMLDivElement => {
