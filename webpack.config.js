@@ -2,6 +2,8 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const { TsconfigPathsPlugin } = require('tsconfig-paths-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+// const CopyWebpackPlugin = require('copy-webpack-plugin');
+// const WriteFilePlugin = require('write-file-webpack-plugin');
 
 module.exports = {
     entry: {
@@ -46,7 +48,8 @@ module.exports = {
         new HtmlWebpackPlugin({
             title: 'Hot Module Replacement',
         }),
-        // new CopyWebpackPlugin([{ from: 'src/assets', to: 'images' }]),
+        // new CopyWebpackPlugin({ patterns: [{ from: 'src/assets', to: 'images' }] }),
+        // new WriteFilePlugin(),
     ],
     output: {
         filename: 'bundle.js',
