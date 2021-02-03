@@ -23,7 +23,7 @@ export const navbar = (): HTMLDivElement => {
                 // button.onclick = (event) => console.log(event.currentTarget);
 
                 const img = document.createElement('img');
-                img.src = String(iconImage.default);
+                img.src = String(iconImage);
                 img.alt = 'icon';
                 button.appendChild(img);
                 button.appendChild(document.createTextNode('Show More'));
