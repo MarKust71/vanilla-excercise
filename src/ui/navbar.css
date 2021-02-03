@@ -75,7 +75,6 @@ img {
     float: none;
     color: black;
     text-decoration: none;
-
     display: flex;
     justify-content: start;
     align-items: center;
@@ -88,7 +87,6 @@ img {
     width: var(--MENU_ITEM_WIDTH);
     border-right: 1px solid lightgray;
     border-bottom: 1px solid lightgrey;
-
 }
 
 .dropdown-content a:hover {

@@ -2,6 +2,7 @@ import 'ui/navbar.css';
 import { MAIN_MENU_ITEMS, MENU_ITEM_PADDING_BORDER, MENU_ITEM_WIDTH, TITLE_WIDTH } from 'app/globals';
 const iconImage = require('assets/icon.png');
 import { dropdown } from 'ui/dropdown';
+import { DropdownItems } from 'app/types';
 
 export const navbar = (): HTMLDivElement => {
     const div = document.createElement('div');
@@ -26,11 +27,12 @@ export const navbar = (): HTMLDivElement => {
                 button.appendChild(img);
                 button.appendChild(document.createTextNode('Show More'));
 
-                const dropdownContent = dropdown([
-                    { capture: 'opcja 1' },
-                    { capture: 'opcja 2' },
-                    { capture: 'opcja 3' },
-                ]);
+                const dropdownItems: DropdownItems = [];
+                for (let j = maxMenuItemsVisible - 1; j < MAIN_MENU_ITEMS.length; j++) {
+                    dropdownItems.push({ capture: MAIN_MENU_ITEMS[j] });
+                }
+
+                const dropdownContent = dropdown(dropdownItems);
 
                 button.appendChild(dropdownContent);
 
