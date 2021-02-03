@@ -4,6 +4,8 @@ import { MAIN_MENU_ITEMS, MENU_ITEM_PADDING_BORDER, MENU_ITEM_WIDTH, TITLE_WIDTH
 const iconImage = require('assets/icon.png');
 import { dropdown } from 'ui/dropdown';
 
+console.log(JSON.stringify(iconImage.default));
+
 export const navbar = (): HTMLDivElement => {
     const div = document.createElement('div');
     div.id = 'navbar';
@@ -24,7 +26,7 @@ export const navbar = (): HTMLDivElement => {
                 // button.onclick = (event) => console.log(event.currentTarget);
 
                 const img = document.createElement('img');
-                img.src = String(iconImage);
+                img.src = iconImage.default;
                 img.alt = 'icon';
                 button.appendChild(img);
                 button.appendChild(document.createTextNode('Show More'));
