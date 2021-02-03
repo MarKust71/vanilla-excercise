@@ -1,9 +1,11 @@
-import { MENU_ITEM_HEIGHT, MENU_ITEM_PADDING_BORDER, MENU_ITEM_WIDTH } from 'app/globals';
+import { MENU_ITEM_HEIGHT, MENU_ITEM_PADDING_BORDER, MENU_ITEM_WIDTH, TITLE_WIDTH } from 'app/globals';
 import { navbar } from 'ui/navbar';
 
 let windowWidth = window.innerWidth;
 
 export const reportWindowSize = () => {
+    if (window.innerWidth < TITLE_WIDTH + MENU_ITEM_WIDTH + MENU_ITEM_PADDING_BORDER) return;
+
     const addNewNavbar = (navbarParent: HTMLElement | null) => {
         const newNavbar = navbar();
         if (navbarParent) navbarParent.appendChild(newNavbar);

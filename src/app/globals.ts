@@ -1,4 +1,6 @@
 export const TITLE = 'Visual Language';
+export const TITLE_WIDTH = 175;
+
 export const MAIN_MENU_ITEMS = [
     'Components',
     'Components1',
@@ -6,8 +8,6 @@ export const MAIN_MENU_ITEMS = [
     'Components3',
     'Components4',
     'Components5',
-    'Components6',
-    'Components7',
 ];
 
 export const MENU_ITEM_WIDTH = 175;
