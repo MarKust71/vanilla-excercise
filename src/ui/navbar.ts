@@ -1,6 +1,7 @@
 import 'ui/navbar.css';
 import { MAIN_MENU_ITEMS, MENU_ITEM_PADDING_BORDER, MENU_ITEM_WIDTH, TITLE_WIDTH } from 'app/globals';
 import * as iconImage from 'assets/icon.png';
+import { dropdown } from 'ui/dropdown';
 
 export const navbar = (): HTMLDivElement => {
     const div = document.createElement('div');
@@ -27,25 +28,11 @@ export const navbar = (): HTMLDivElement => {
                 button.appendChild(img);
                 button.appendChild(document.createTextNode('Show More'));
 
-                const dropdownContent = document.createElement('div');
-                dropdownContent.id = 'dropdown';
-                dropdownContent.className = 'dropdown-content';
-
-                let dropdownItem;
-                dropdownItem = document.createElement('a');
-                dropdownItem.href = '#';
-                dropdownItem.appendChild(document.createTextNode('opcja 1'));
-                dropdownContent.appendChild(dropdownItem);
-
-                dropdownItem = document.createElement('a');
-                dropdownItem.href = '#';
-                dropdownItem.appendChild(document.createTextNode('opcja 2'));
-                dropdownContent.appendChild(dropdownItem);
-
-                dropdownItem = document.createElement('a');
-                dropdownItem.href = '#';
-                dropdownItem.appendChild(document.createTextNode('opcja 3'));
-                dropdownContent.appendChild(dropdownItem);
+                const dropdownContent = dropdown([
+                    { capture: 'opcja 1' },
+                    { capture: 'opcja 2' },
+                    { capture: 'opcja 3' },
+                ]);
 
                 button.appendChild(dropdownContent);
 
