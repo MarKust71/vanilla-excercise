@@ -14,18 +14,48 @@ export const navbar = (): HTMLDivElement => {
     );
     for (let i = 0; i <= maxMenuItemsVisible - 1; i++) {
         const menuitem = document.createElement('a');
-        menuitem.href = '#';
         if (i === maxMenuItemsVisible - 1) {
             if (maxMenuItemsVisible < MAIN_MENU_ITEMS.length) {
+                const button = document.createElement('button');
+                button.id = 'button';
+
+                // button.onclick = (event) => console.log(event.currentTarget);
+
                 const img = document.createElement('img');
                 img.src = String(iconImage.default);
                 img.alt = 'icon';
-                menuitem.appendChild(img);
-                menuitem.appendChild(document.createTextNode('Show More'));
+                button.appendChild(img);
+                button.appendChild(document.createTextNode('Show More'));
+
+                const dropdownContent = document.createElement('div');
+                dropdownContent.id = 'dropdown';
+                dropdownContent.className = 'dropdown-content';
+
+                let dropdownItem;
+                dropdownItem = document.createElement('a');
+                dropdownItem.href = '#';
+                dropdownItem.appendChild(document.createTextNode('opcja 1'));
+                dropdownContent.appendChild(dropdownItem);
+
+                dropdownItem = document.createElement('a');
+                dropdownItem.href = '#';
+                dropdownItem.appendChild(document.createTextNode('opcja 2'));
+                dropdownContent.appendChild(dropdownItem);
+
+                dropdownItem = document.createElement('a');
+                dropdownItem.href = '#';
+                dropdownItem.appendChild(document.createTextNode('opcja 3'));
+                dropdownContent.appendChild(dropdownItem);
+
+                button.appendChild(dropdownContent);
+
+                menuitem.appendChild(button);
             } else {
+                menuitem.href = '#';
                 menuitem.appendChild(document.createTextNode(MAIN_MENU_ITEMS[i]));
             }
         } else {
+            menuitem.href = '#';
             menuitem.appendChild(document.createTextNode(MAIN_MENU_ITEMS[i]));
         }
         div.appendChild(menuitem);

@@ -3,11 +3,11 @@ export const TITLE_WIDTH = 175;
 
 export const MAIN_MENU_ITEMS = [
     'Components',
-    'Components1',
-    'Components2',
-    'Components3',
-    'Components4',
-    'Components5',
+    'Components 1',
+    'Components 2',
+    'Components 3',
+    'Components 4',
+    'Components 5',
 ];
 
 export const MENU_ITEM_WIDTH = 175;
