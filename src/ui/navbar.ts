@@ -1,10 +1,7 @@
 import 'ui/navbar.css';
 import { MAIN_MENU_ITEMS, MENU_ITEM_PADDING_BORDER, MENU_ITEM_WIDTH, TITLE_WIDTH } from 'app/globals';
-// import * as iconImage from '../assets/icon.png';
 const iconImage = require('assets/icon.png');
 import { dropdown } from 'ui/dropdown';
-
-console.log(JSON.stringify(iconImage.default));
 
 export const navbar = (): HTMLDivElement => {
     const div = document.createElement('div');
@@ -22,8 +19,6 @@ export const navbar = (): HTMLDivElement => {
             if (maxMenuItemsVisible < MAIN_MENU_ITEMS.length) {
                 const button = document.createElement('button');
                 button.id = 'button';
-
-                // button.onclick = (event) => console.log(event.currentTarget);
 
                 const img = document.createElement('img');
                 img.src = iconImage.default;

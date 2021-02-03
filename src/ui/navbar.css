@@ -74,10 +74,21 @@ img {
 .dropdown-content a {
     float: none;
     color: black;
-    padding: 12px 16px;
     text-decoration: none;
-    display: block;
-    text-align: left;
+
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    font-size: 16px;
+    font-weight: 400;
+    color: gray;
+    background-color: white;
+    padding: 0 16px;
+    height: 48px;
+    width: var(--MENU_ITEM_WIDTH);
+    border-right: 1px solid lightgray;
+    border-bottom: 1px solid lightgrey;
+
 }
 
 .dropdown-content a:hover {
