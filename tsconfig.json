@@ -7,7 +7,7 @@
         "target": "es5",
         "allowJs": true,
 //        "noEmit": true,
-        "lib": ["dom", "esnext"],
+        "lib": ["dom"],
         "moduleResolution": "node",
         "resolveJsonModule": true,
         "allowSyntheticDefaultImports": true,
@@ -26,8 +26,14 @@
         "baseUrl": "src",
         "paths": {
             "app/*": ["./app/*"],
-            "ui/*": ["./ui/*"]
-        }
+            "ui/*": ["./ui/*"],
+            "assets/*": ["./assets/*"]
+        },
+        "typeRoots" : ["node_modules/@types", "./typings"]
     },
+    "include": [
+        "typings/**/*",
+        "src/**/*"
+    ],
     "exclude": ["node_modules", "babel.config.js", "metro.config.js", "jest.config.js"]
 }

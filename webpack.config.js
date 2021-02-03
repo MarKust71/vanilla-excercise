@@ -19,6 +19,17 @@ module.exports = {
                 test: /\.css$/i,
                 use: ['style-loader', 'css-loader'],
             },
+            {
+                test: /\.(png|jpe?g|gif)$/i,
+                use: [
+                    {
+                        loader: 'file-loader',
+                        options: {
+                            outputPath: 'images',
+                        },
+                    },
+                ],
+            },
         ],
     },
     resolve: {
@@ -35,6 +46,7 @@ module.exports = {
         new HtmlWebpackPlugin({
             title: 'Hot Module Replacement',
         }),
+        // new CopyWebpackPlugin([{ from: 'src/assets', to: 'images' }]),
     ],
     output: {
         filename: 'bundle.js',

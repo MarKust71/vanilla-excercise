@@ -9,12 +9,16 @@
 }
 
 .navbar a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     float: left;
     font-size: 16px;
     color: gray;
     background-color: white;
     text-align: center;
-    padding: 14px 16px;
+    padding: 0 16px;
+    height: 48px;
     text-decoration: none;
     width: var(--MENU_ITEM_WIDTH);
     border-right: 1px solid lightgray;
@@ -25,4 +29,10 @@
     font-weight: 700;
     color: blue;
     border-bottom: 3px solid blue;
+}
+
+img {
+    width: 24px;
+    height: 24px;
+    margin-right: 5px;
 }
